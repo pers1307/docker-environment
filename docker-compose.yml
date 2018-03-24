@@ -1,0 +1,62 @@
+version: '2'
+
+services:
+
+  remont:
+#    image: pers1307/publisher:start-script
+    build: ./remont
+    expose:
+     - 3306
+#     - 22
+    ports:
+      - 8080:80
+      - 3306:3306
+#      - 2222:22
+    volumes:
+      - /home/pers1307/project/remont:/var/www/site
+#    entrypoint:
+#      - /home/user/start.sh
+    stdin_open: true
+    tty: true
+
+
+
+
+
+#  remont:
+#    image: remont
+#    expose:
+#     - 3307
+#    ports:
+#      - 172.17.0.1:8081:80
+#      - 172.17.0.1:3307:3306
+##      - 172.17.0.1:2222:22
+#    volumes:
+#      - /home/pers1307/project/test:/var/www/site
+##    entrypoint:
+##      - /home/user/start.sh
+#    stdin_open: true
+#    tty: true
+
+#  test:
+#    build: .
+#    ports:
+#      - 172.17.0.1:2222:22
+#    stdin_open: true
+#    tty: true
+
+
+
+
+
+    #environment:
+    #  MYSQL_ROOT:
+
+#  wordpress:
+#    image: pers1307/publisher
+#    ports:
+#      - 8080:80
+
+#servise ssh start
+#servise /etc/init.d/ssh start
+#ssh root@172.17.0.2
